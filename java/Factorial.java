@@ -4,7 +4,7 @@ public class Factorial{
         Scanner sc= new Scanner(System.in);
         System.out.println("n=?");
         int n=sc.nextInt();
-        System.out.println("Factorial of "+ n +"is" + fact(n));
+        System.out.println("Factorial of "+ n +" is " + fact(n));
         sc.close();
     }
     public static int fact(int n){

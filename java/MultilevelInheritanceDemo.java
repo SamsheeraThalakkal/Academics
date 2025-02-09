@@ -52,9 +52,9 @@ class Emplolyee extends Person {
         return super.toString() +
                 "\nEmployee Details\n***************\n" +
                 "\nEmp_id= " + empid +
-                "\nSalary= " + salary +
                 "\nCompany Name= " + company_name +
-                "\nQualification= " + qualification + "\n";
+                "\nQualification= " + qualification +
+                "\nSalary= " + salary + "\n";
     }
 }
 
@@ -83,17 +83,19 @@ class Teacher extends Emplolyee {
     }
 }
 
-public class MultiDemo {
+public class MultilevelInheritanceDemo {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter no of teachers");
         int n = sc.nextInt();
-
+        Teacher[] t = new Teacher[n];
         for (int i = 0; i < n; i++) {
             System.out.println("Enter details of teacher: " + (i + 1));
-            Teacher t = new Teacher(sc);
-            System.out.println(t);
+            t[i] = new Teacher(sc);
         }
-
+        for (Teacher i : t) {
+            System.out.println(i);
+        }
     }
+
 }
