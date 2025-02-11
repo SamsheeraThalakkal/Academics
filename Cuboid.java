@@ -1,4 +1,4 @@
-package Trash;
+
 interface Measurable {
     public double volume();
 
