@@ -62,11 +62,11 @@ public class ComparableDemo {
         Cylinder c = new Cylinder(sc);
         int res = cu.compareByVolume(c);
         if (res == 1) {
-            System.out.println("Cuboid has more volume(" + cu.volume() + ")");
+            System.out.println("Cuboid has more volume(" + String.format("%.3f",cu.volume()) + ")");
         } else if (res == -1) {
-            System.out.println("Cylinder has more volume(" + c.volume() + ")");
+            System.out.println("Cylinder has more volume(" + String.format("%.3f",c.volume()) + ")");
         } else {
-            System.out.println("Both have same volume(" + cu.volume() + ")");
+            System.out.println("Both have same volume(" + String.format("%.3f",cu.volume()) + ")");
         }
         sc.close();
     }
