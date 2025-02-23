@@ -1,5 +1,4 @@
-import java.util.Scanner;;
-
+import java.util.Scanner;
 class Cpu {
     int price;
 
@@ -47,13 +46,17 @@ class Cpu {
 
 public class CpuDemo {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        Cpu c = new Cpu(sc);
+        try(Scanner sc = new Scanner(System.in)){
+         Cpu c = new Cpu(sc);
         Cpu.Processor p = c.new Processor(sc);
         Cpu.Ram r = new Cpu.Ram(sc);
         System.out.println("\nDetails\n**********\n");
         p.ShowProcessor();
         r.ShowRam();
-        sc.close();
+        }
+        catch (Exception e){
+            System.out.println("Error");
+        }  
+        
     }
 }
