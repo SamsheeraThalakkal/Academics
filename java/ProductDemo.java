@@ -64,9 +64,7 @@ public class ProductDemo {
     public static void sort() {
         Collections.sort(products, Comparator.comparing(Product::getName));
         System.out.println("Products sorted by name.\n");
-        for (Product p : products) {
-            System.out.println("Name: " + p.getName() + ", Price: " + p.getPrice());
-        }
+        displayProducts();
     }
 
     public static void addProduct(Scanner scanner) {
@@ -84,7 +82,7 @@ public class ProductDemo {
             System.out.println("No products available.");
             return;
         }
-        System.out.println("\nProduct List:\n");
+        System.out.println("\nProduct List:\n***********");
         for (Product product : products) {
             System.out.println("Name: " + product.getName() + ", Price: " + product.getPrice());
         }
